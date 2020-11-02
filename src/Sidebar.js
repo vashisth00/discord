@@ -33,6 +33,7 @@ function Sidebar() {
                     <SidebarChannel/>
                     <SidebarChannel/>
                 </div>
+            </div>
                 <div className="sidebar__voice">
                 <SignalCellularAltIcon className='sidebar__voiceIcons' fontSize='large' />
                 <div className="sidebar__voiceInfo">
@@ -59,7 +60,7 @@ function Sidebar() {
                 </div>
             </div>
             </div>
-        </div>
+       
     )
 }
 
