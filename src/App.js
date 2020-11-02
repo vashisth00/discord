@@ -6,8 +6,9 @@ function App() {
   return (
     //BEM naming convention
     <div className="App">
-    <h1>Hi</h1>
-    <Sidebar></Sidebar>
+       <Sidebar></Sidebar>
+    <h1 className="col">Hi</h1>
+   
     </div>
   );
 }
