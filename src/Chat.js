@@ -5,7 +5,7 @@ import AddCircleIcon from '@material-ui/icons/AddCircle'
 import CradGiftcardIcon from '@material-ui/icons/CardGiftcard'
 import GifIcon from '@material-ui/icons/Gif'
 import EmojiEmoticonsIcon from '@material-ui/icons/EmojiEmotions'
-//import Message from './Message'
+import Message from './Message'
 
 function Chat() {
     return (
@@ -14,18 +14,13 @@ function Chat() {
        
 
         <div className="chat__messages">
-            {/* {messages.map((message) => {
-                console.log(message)
-            })}
-            {messages.map(message => (
-                <Message message={message.message} timestamp={message.timestamp} user={message.user} />
-            ))} */}
+          <Message></Message>
         </div>
 
         <div className="chat__input">
             <AddCircleIcon fontSize='large' />
             <form>
-                <input type="text" placeholder="Message #${channelName}" />
+                <input type="text" placeholder="Message" />
                 <button className='chat__inputButton' type='submit'>Send Message</button>
             </form>
 
