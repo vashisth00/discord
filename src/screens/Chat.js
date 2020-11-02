@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Chat.css"
+import "../styles/Chat.css"
 import ChatHeader from './ChatHeader'
 import AddCircleIcon from '@material-ui/icons/AddCircle'
 import CradGiftcardIcon from '@material-ui/icons/CardGiftcard'
