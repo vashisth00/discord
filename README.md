@@ -4,10 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Current deadline to make this is 3rd November 2020 
 
-[] Firebase 
-[] ReactUI
-[] Material Icons
-[] Redux for state management
+[] - Firebase 
+[] - ReactUI
+[] - Material Icons
+[] - Redux for state management
+
+[Discord Clone here](https://discord-11.web.app/)
 
 ## Available Scripts
 
