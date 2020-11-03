@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import '../styles/App.css';
 import Sidebar from './Sidebar';
-import Chat from './Chat';
-import {useSelector, useDispatch} from "react-redux";
+import Chat from './component/Chat';
+import { useSelector, useDispatch} from "react-redux";
 import {selectUser} from "../redux/features/userSlice";
 import Login from './component/Login';
 import { auth } from '../firebase';
@@ -12,36 +12,36 @@ function App() {
  const user = useSelector(selectUser);
  // Shoot things into the data layer
 const dispatch = useDispatch();
- useEffect(()=>{
-    auth.onAuthStateChanged((authUser)=>{
+useEffect(() => {
+  //listner
+  auth.onAuthStateChanged((authUser) => { 
+    if (authUser) {
+      dispatch(login({
+        uid: authUser.uid,
+        photo: authUser.photoURL,
+        email: authUser.email,
+        displayName: authUser.displayName
+      }))
+    } else {
+      dispatch(logout())
+    }
+  })
+}, [dispatch])
 
-      if(authUser){
-        //user Logged in
-        dispatch(login({
-          uid: authUser.uid,
-          photo: authUser.photoURL,
-          email: authUser.email,
-          displayName: authUser.displayName
-        }))
-      }
-      else{
-        //logged out
-      }
-    })
- }, [dispatch])
-  return (
-    //BEM naming convention
-    <div className="App">
-      {user ?(
+
+return (
+  <div className="App">
+    {user ? (
       <>
-       <Sidebar/>
-      <Chat/>
+        <Sidebar />
+        <Chat />
       </>
-      ):(
-        <Login></Login>
+
+    ) : (
+        <Login />
       )}
-    </div>
-  );
+  </div>
+);
 }
 
 export default App;

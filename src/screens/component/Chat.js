@@ -1,11 +1,11 @@
 import React from 'react'
-import "../styles/Chat.css"
-import ChatHeader from './ChatHeader'
+import "../../styles/Chat.css"
+import ChatHeader from '../ChatHeader'
 import AddCircleIcon from '@material-ui/icons/AddCircle'
 import CradGiftcardIcon from '@material-ui/icons/CardGiftcard'
 import GifIcon from '@material-ui/icons/Gif'
 import EmojiEmoticonsIcon from '@material-ui/icons/EmojiEmotions'
-import Message from './Message'
+import Message from '../Message'
 
 function Chat() {
     return (
