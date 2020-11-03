@@ -32,7 +32,7 @@ function Sidebar() {
 
     const handleAddChannel = (e) => {
         e.preventDefault()
-
+      
         const channelName = prompt('Enter a new channel name')
 
         if (channelName) {
@@ -43,11 +43,13 @@ function Sidebar() {
         }
     }
     return (
+        
         <div className='sidebar' >
         <div className="sidebar__top">
             <img src="https://upload.wikimedia.org/wikipedia/sco/thumb/9/98/Discord_logo.svg/1200px-Discord_logo.svg.png" height="50px"></img>
             <ExpandMoreIcon />
         </div>
+        
 
         <div className="sidebar__channels">
             <div className="sidebar__channelsHeader">
@@ -56,7 +58,7 @@ function Sidebar() {
                     <h4>Text Channels</h4>
                 </div>
 
-                <AddIcon onClick={handleAddChannel} className='sidebar__addChannel' />
+                <AddIcon  data-toggle="modal" data-target="#exampleModal" onClick={handleAddChannel} className='sidebar__addChannel' />
             </div>
             <div className="sidebar__channelsList">
             {

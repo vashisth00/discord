@@ -7,6 +7,7 @@ import PeopleAltRounded from '@material-ui/icons/PeopleAltRounded'
 import SearchRoundedIcon from '@material-ui/icons/SearchRounded'
 import SendRoundedIcon from '@material-ui/icons/SendRounded'
 import HelpRoundedIcon from '@material-ui/icons/HelpRounded'
+import { auth } from '../firebase'
 
 const ChatHeader = ({ channelName }) => {
     return (
@@ -27,7 +28,7 @@ const ChatHeader = ({ channelName }) => {
                     <SearchRoundedIcon />
                 </div>
 
-                <SendRoundedIcon />
+                <SendRoundedIcon onClick={() => auth.signOut() }/>
                 <HelpRoundedIcon />
             </div>
         </div>
