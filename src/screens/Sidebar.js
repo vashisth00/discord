@@ -49,6 +49,7 @@ function Sidebar() {
             </div>
         </div>
         <div className="sidebar__profile">
+             {/* Pull in user Photo from redux */}
             <Avatar src="#" />
             <div className="sidebar__profileInfo">
                 <h3>Vashisth</h3>
