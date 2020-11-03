@@ -48,4 +48,5 @@
 
 .chat__messages{
     flex: 1;
+    overflow: scroll;
 }
